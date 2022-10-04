@@ -31,7 +31,49 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   @param {number} a - первое число
+   @param {number} b - второе число
+   @return {number} - сумма чисел
+   */
+  function sum(a, b) {
+    return a + b;
+  }
+  console.log(sum(2, 6)); // 8
+
+  /**
+   @param {number} a - первое число
+   @param {number} b - второе число
+   @return {number} - разница чисел
+   */
+  function difference(a, b) {
+    if (a > b) {
+      return a - b;
+    }
+    return b - a;
+  }
+  console.log(difference(2, 6)); // 4
+  console.log(difference(6, 3)); // 3
+
+  /**
+   @param {number} a - первое число
+   @param {number} b - второе число
+   @return {number} - проиведение чисел
+   */
+  function multiplication(a, b) {
+    return a * b;
+  }
+  console.log(multiplication(2, 6)); // 12
+
+  /**
+   @param {number} a - первое число
+   @param {number} b - второе число
+   @return {number} - частное чисел
+   */
+  function division(a, b) {
+    return a / b;
+  }
+  console.log(division(4, 2)); // 2
 </script>
 </body>
 </html>

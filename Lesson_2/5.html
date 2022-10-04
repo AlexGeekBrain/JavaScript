@@ -32,7 +32,46 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   @param {number} arg1 - первое число
+   @param {number} arg2 - второе число
+   @param {string} operation - операция, где возможно сложение, вычитание, умножение или деление
+   @return {number} - результат operation 
+   */
+   function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case "+": return sum(arg1, arg2);
+      case "-": return difference(arg1, arg2);
+      case "*": return multiplication(arg1, arg2);
+      case "/": return division(arg1, arg2);
+      default: return NaN;
+    }
+  }
+  
+   function sum(a, b) {
+    return a + b;
+  }
+  
+  function difference(a, b) {
+    if (a > b) {
+      return a - b;
+    }
+    return b - a;
+  }
+  
+  function multiplication(a, b) {
+    return a * b;
+  }
+  
+  function division(a, b) {
+    return a / b;
+  }
+
+  console.log(mathOperation(5, 3, "+")); // 8
+  console.log(mathOperation(5, 3, "-")); // 2
+  console.log(mathOperation(5, 3, "*")); // 15
+  console.log(mathOperation(5, 3, "/")); // 1.6666666666666667
+  console.log(mathOperation(5, 3, ":)")); // NaN
 </script>
 </body>
 </html>
